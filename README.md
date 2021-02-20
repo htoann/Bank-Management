@@ -1,2 +1,1 @@
-# Bank-Management
- 
+# A simple banking management software
