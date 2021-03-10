@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.Calendar;
 
 public class Information {
-
     String citizenNum, Name;
     long Deposits;
     double interestRate;
@@ -10,7 +9,6 @@ public class Information {
     Scanner sc = new Scanner(System.in);
 
     public void In() {
-
         System.out.println("Enter Name: ");
         Name = sc.nextLine();
 
@@ -21,7 +19,6 @@ public class Information {
             if(Deposits < 999999) {
                 System.out.println("Deposits must be one million or more");
             }
-
         } while(Deposits < 999999);
 
         do {
@@ -31,7 +28,6 @@ public class Information {
             if(interestRate < 0) {
                 System.out.println("Error Interestrate, please retype!");
             }
-
         } while(interestRate < 0);
 
         System.out.print("Enter Book Date");
@@ -39,7 +35,6 @@ public class Information {
     }
 
     public void Out() {
-        
         System.out.println("Name: " + Name);
         System.out.println("Deposits: " + Deposits + " VND");
         System.out.println("Interestrate: " + interestRate + "%");
@@ -48,7 +43,7 @@ public class Information {
         System.out.println("Sent for " + monthSent() + " months");
     }
 
-    // Calculates the number of months actually sent to the bank
+    // Calc the number of months actually sent to the bank
     public int monthSent() {
         int n;
 
