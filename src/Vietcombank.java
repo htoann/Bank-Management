@@ -3,20 +3,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vietcombank {
-
     ArrayList<TermBook> listTermBook 
     = new ArrayList<>();
-
+    
     ArrayList<NonTermBook> listNonTermBook 
     = new ArrayList<>();
     
     ArrayList<String> listCitizenNum 
     = new ArrayList<>();
-
+    
     Scanner sc = new Scanner(System.in);
 
     public void In() {
-
         int choose;
 
         do {
@@ -33,7 +31,6 @@ public class Vietcombank {
 
             // Term book
             if (choose == 1) {
-
                 TermBook x = new TermBook();
                 
                 do {
@@ -62,7 +59,6 @@ public class Vietcombank {
 
             // NonTerm Book
             if (choose == 2) {
-
                 NonTermBook x = new NonTermBook();
 
                 do {
@@ -87,21 +83,20 @@ public class Vietcombank {
                 x.In();
                 listNonTermBook.add(x);
             }
-
         } while (choose != 3);
     }
 
     public void Out() {
-
         int n = listTermBook.size();
+        int m = listNonTermBook.size();
+        
         for (int i = 0; i < n; i++) {
             System.out.println("\nUser " + (i + 1));
             System.out.println("Citizens Number: " + 
             listTermBook.get(i).getCitizenNum());
             listTermBook.get(i).Out();
         }
-
-        int m = listNonTermBook.size();
+        
         for (int j = 0; j < m; j++) {
             System.out.println("\nUser " + (n + j + 1));
             System.out.println("Citizens Number: " + 
@@ -112,18 +107,18 @@ public class Vietcombank {
 
     // Total interest payable by the bank
     public float ToTalInterest() {
-
         float total = 0;
 
         int n = listTermBook.size();
+        int m = listNonTermBook.size();
         for (int i = 0; i < n; i++) {
             total += listTermBook.get(i).InterestCal();
         }
-
-        int m = listNonTermBook.size();
+        
         for (int i = 0; i < m; i++) {
             total += listNonTermBook.get(i).InterestCal();
         }
+        
         return total;
     }
 }
