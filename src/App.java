@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        
         Vietcombank x = new Vietcombank();
+        
         x.In();
         System.out.println("\n----------OUT----------\n");
         x.Out();
