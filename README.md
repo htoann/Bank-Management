@@ -1,1 +1,1 @@
-# A simple banking management software (use Inheritance)
+## A simple banking management software (use Inheritance)
